@@ -3,102 +3,247 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
     color: #333;
-    background-color: #f8f9fa;
     line-height: 1.6;
-
-    /* Mantém o rodapé no final da tela */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-/* ESTILO DO CABEÇALHO */
+/* HEADER / NAVBAR */
 .header {
-    background-color: #1e293b; /* Tom escuro elegante */
-    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.header .logo a {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo a {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111;
     text-decoration: none;
 }
 
-.header .nav-menu ul {
+.nav-menu ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 30px;
 }
 
-.header .nav-menu a {
-    color: #cbd5e1;
+.nav-menu a {
     text-decoration: none;
+    color: #444;
     font-weight: 500;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
-.header .nav-menu a:hover {
-    color: #38bdf8; /* Cor azul ao passar o mouse */
+.nav-menu a:hover {
+    color: #000000;
 }
 
-/* O CONTEÚDO PRINCIPAL OCUPA O ESPAÇO SOBRANTE */
-.main-content {
-    flex: 1; /* Faz esta área expandir empurrando o rodapé para baixo */
+/* HERO SECTION (50% BRANCO / 50% AZUL) */
+.hero {
+    display: flex;
+    min-height: calc(100vh - 75px);
+    width: 100%;
 }
 
-/* ESTILO DO RODAPÉ */
-.footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 1.5rem 1rem;
+/* Lado Esquerdo */
+.hero-left {
+    flex: 1;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
+    justify-content: center;
+    padding: 60px 8%;
 }
 
-.footer .destaque {
-    color: #38bdf8;
-    font-weight: bold;
+.hero-left .tagline {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-.footer .social-links {
+.hero-left h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-left .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 450px;
+}
+
+/* Botões */
+.hero-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 15px;
 }
 
-.footer .social-links a {
-    color: #94a3b8;
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
-.footer .social-links a:hover {
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #1a202c;
+    border: 1px solid #cbd5e0;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e0;
+}
+
+.btn-primary {
+    background-color: #000000;
     color: #ffffff;
+    border: 1px solid #000000;
 }
 
-/* RESPONSIVIDADE (Dispositivos Móveis) */
-@media (max-width: 600px) {
-    .header {
+.btn-primary:hover {
+    background-color: #333333;
+}
+
+/* Lado Direito (Azul) */
+.hero-right {
+    flex: 1;
+    background-color: #000000; /* Cor azul brilhante do modelo */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    max-height: 85%;
+    max-width: 80%;
+    object-fit: contain;
+}
+
+/* SEÇÃO SOBRE (CARD COM BORDAS ARREDONDADAS) */
+.sobre-container {
+    background-color: #000000; /* Fundo azul continuado */
+    padding: 0 4% 60px 4%;
+}
+
+.sobre-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sobre-img-box {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #000000;
+}
+
+.sobre-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-content .section-tag {
+    font-family: 'Merriweather', serif;
+    color: #666;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sobre-content h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.sobre-content p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* RODAPÉ */
+.footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* ADAPTAÇÃO PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 900px) {
+    .hero {
         flex-direction: column;
-        gap: 1rem;
-        text-align: center;
     }
 
-    .header .nav-menu ul {
-        gap: 1rem;
+    .hero-right {
+        min-height: 350px;
+    }
+
+    .sobre-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5rem;
     }
 }
