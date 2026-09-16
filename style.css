@@ -51,7 +51,7 @@ body {
     color: #000000;
 }
 
-/* HERO SECTION (50% BRANCO / 50% AZUL) */
+/* HERO SECTION (50% BRANCO / 50% PRETO) */
 .hero {
     display: flex;
     min-height: calc(100vh - 75px);
@@ -127,10 +127,10 @@ body {
     background-color: #333333;
 }
 
-/* Lado Direito (Azul) */
+/* Lado Direito (Preto) */
 .hero-right {
     flex: 1;
-    background-color: #000000; /* Cor azul brilhante do modelo */
+    background-color: #000000; /* Cor preto brilhante do modelo */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -146,7 +146,7 @@ body {
 
 /* SEÇÃO SOBRE (CARD COM BORDAS ARREDONDADAS) */
 .sobre-container {
-    background-color: #000000; /* Fundo azul continuado */
+    background-color: #000000; /* Fundo preto continuado */
     padding: 0 4% 60px 4%;
 }
 
